@@ -1,5 +1,11 @@
 import React from 'react';
 
-const Landing = () => <h2>Landing</h2>;
-
+const Landing = () => {
+	return (
+		<div style={{ textAlign: 'center' }}>
+			<h1>Emaily!</h1>
+			Collect feebpack from your users.
+		</div>
+	);
+}
 export default Landing;
