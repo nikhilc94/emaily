@@ -23,15 +23,13 @@ passport.use(new GoogleStrategy(
 		callbackURL: '/auth/google/callback',  //Route which user is redirected after he provides permission.
 		proxy: true
 	}, 	
-	(accessToken, refreshToken, profile, done) => {
-		User.findOne({ googleId: profile.id })
-			.then((existingUser) => {
-				if(existingUser)
-					done(null, existingUser);
-				else
-					new User({ googleId: profile.id })
-						.save()
-						.then((user) => done(null, user));		
-			});
+	async (accessToken, refreshToken, profile, done) => {
+		const existingUser = await User.findOne({ googleId: profile.id })
+			if(existingUser)
+				done(null, existingUser);
+			else {
+				const user = await new User({ googleId: profile.id }).save();
+				done(null, user);
+			}		
 	})
 );
