@@ -24,8 +24,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 //=================
 
+//ROUTES
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
+//=============
+
 
 //This code runs for routes not specified in server side of the app (Basically the react routes)
 
