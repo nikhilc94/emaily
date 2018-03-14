@@ -5,6 +5,7 @@ const Dashboard = () => {
 	return (
 		<div>
 			<h2>Dashboard</h2>
+			<p>Congratulations! You get 5 free credits upon signing up. Start sending mass surveys now!</p>
   			<div className="fixed-action-btn">
     			<Link to="/surveys/new" className="btn-floating btn-large red">
       				<i className="material-icons">add</i>
