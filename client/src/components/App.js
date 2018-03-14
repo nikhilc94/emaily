@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Header from './Header';
 import Dashboard from './Dashboard';
 import Landing from './Landing';
-import SurveyNew from './SurveyNew';
+import SurveyNew from './surveys/SurveyNew';
 import * as actions from '../actions';
 
 class App extends React.Component {
@@ -15,16 +15,16 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
-				<BrowserRouter>
-					<div>
-						<Header />
+			<BrowserRouter>
+				<div>
+					<Header />
+					<div className="container">
 						<Route path="/" component={Landing} exact />
 						<Route path="/surveys" component={Dashboard} exact />
 						<Route path="/surveys/new" component={SurveyNew} />
 					</div>
-				</BrowserRouter>
-			</div>
+				</div>
+			</BrowserRouter>
 		);	
 	}
 

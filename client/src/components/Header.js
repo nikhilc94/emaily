@@ -24,7 +24,7 @@ class Header extends React.Component {
 
 	render() {
 		return (
-		  <nav>
+		  <nav style={{ marginBottom: '30px', padding: '0 30px' }}>
 		    <div className="nav-wrapper">
 		      <Link 
 		      	className="left brand-logo"
