@@ -1,11 +1,32 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Landing = () => {
+
+
+const Landing = ({ auth }) => {
 	return (
-		<div style={{ textAlign: 'center' }}>
-			<h1>Emaily!</h1>
-			Collect feebpack from your users.
+		<div className="landing">
+			<div className="container">
+				<div className="landing-content">
+					<h1>EMAILY!</h1>
+					<h4>Collecting data that counts!</h4>
+					<h4>Quickly gather actionable insights using e-mail surveys and polls.</h4>
+					{
+						auth ? 
+						<NavLink to="/surveys" className="waves-effect waves-light btn-large">
+							Go to Dashboard
+			  			</NavLink> :
+			  			''
+					}
+				</div>
+			</div>
 		</div>
 	);
 }
-export default Landing;
+
+const mapStateToProps = (state) => ({
+	auth: state.auth
+});
+
+export default connect(mapStateToProps)(Landing);

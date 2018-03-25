@@ -18,8 +18,8 @@ class App extends React.Component {
 			<BrowserRouter>
 				<div>
 					<Header />
+					<Route path="/" component={Landing} exact />
 					<div className="container">
-						<Route path="/" component={Landing} exact />
 						<Route path="/surveys" component={Dashboard} exact />
 						<Route path="/surveys/new" component={SurveyNew} />
 					</div>

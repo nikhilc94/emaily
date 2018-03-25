@@ -5,7 +5,7 @@ import SurveyList from './surveys/SurveyList';
 const Dashboard = () => {
 	return (
 		<div>
-			<p>Congratulations! You get 5 free credits upon signing up. Start sending mass surveys now!</p>
+			<p>Congratulations! You get 15 free credits upon signing up. Start sending mass surveys now!</p>
 			<SurveyList />
   			<div className="fixed-action-btn">
     			<Link to="/surveys/new" className="btn-floating btn-large red">

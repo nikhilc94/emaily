@@ -1,0 +1,62 @@
+
+
+body {
+	font-family: roboto;
+	height: 100vh;
+	background-color: #f7f7f7
+}
+
+nav {
+	padding: 0 30px;
+}
+
+.landing {
+	height: 598px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./survey.jpg');
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+
+.landing-content {
+	position: absolute;
+	top: 35%;
+	left: 10%;
+}
+
+h1 {
+	font-weight: 300;
+	margin-top: 0;
+	margin-right: 30px;
+	display: inline;
+}
+
+h4 {
+	font-weight: 300;
+}
+
+.btn-large {
+	margin-top: 20px;
+}
+
+form {
+	margin: 3rem 0;
+}
+
+.form-review {
+	margin-top: 5rem;
+}
+
+.form-review__details {
+	margin-bottom: 2rem;
+}
+
+.card {
+	background-color: #f1f1f1;
+}
+
+.form-review__field {
+	margin: 2rem 0;
+}
+
+

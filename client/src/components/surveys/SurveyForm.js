@@ -8,7 +8,7 @@ class SurveyForm extends React.Component {
 	
 	renderFields() {
 		return(
-			<div>
+			<div className="form">
 				<Field 
 					label="Survey Title" 
 					type="text" 

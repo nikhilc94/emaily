@@ -9,6 +9,7 @@ export default (emails) => {
 		.filter(email => !re.test(email))  //the arrow function captures the emails that fail the test.
 
 	if(invalidEmails.length)
-		return `These emails are invalid: ${invalidEmails}`
+		return `These email(s) are invalid: ${invalidEmails}.              
+				Recipient list must be a comma separated list of emails.`
 	return;
 };

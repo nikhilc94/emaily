@@ -5,22 +5,22 @@ import * as actions from '../../actions';
 
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => { 
 	return (
-		<div>
+		<div className="form-review">
 			<h5>Please confirm your entries.</h5>
-			<div>
-				<div>
+			<div className="form-review__details">
+				<div className="form-review__field">
 					<label>Survey Title</label>
 					<div>{formValues.title}</div>
 				</div>
-				<div>
+				<div className="form-review__field">
 					<label>Subject Line</label>
 					<div>{formValues.subject}</div>
 				</div>
-				<div>
+				<div className="form-review__field">
 					<label>Email body</label>
 					<div>{formValues.body}</div>
 				</div>
-				<div>
+				<div className="form-review__field">
 					<label>Recipient List</label>
 					<div>{formValues.recipients}</div>
 				</div>
